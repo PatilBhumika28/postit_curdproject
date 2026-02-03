@@ -1,0 +1,39 @@
+h1{
+    color: rgb(79, 6, 6);
+    font-size: 40px;
+}
+.card {
+    background-color: beige;
+    border: 2px solid black;
+    max-width: 600px;
+    margin: 15px auto;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.card-title{
+    font-style: italic;
+    font-weight: 500;
+}
+
+body {
+  background-color: beige;
+  
+}
+.small{
+    font-size: 29px;
+    font-weight: 400;
+}
+.pixel-mascot {
+    width: 70px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0px); }
+}

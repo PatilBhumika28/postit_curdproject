@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL posts</title>
+     <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+    <link href="style1.css" rel="stylesheet"/>
+   
+
+</head>
+<body>
+
+
+        <!-- 🔹 NAVBAR -->
+    <nav class="navbar navbar-expand-lg" style="background-color: maroon;">
+        <div class="container">
+            <a class="navbar-brand text-white fw-bold" href="/posts">Post IT</a>
+
+            <div class="ms-auto">
+                <a class="btn btn-outline-light" href="/posts/new">
+                    ➕ New Post
+                </a>
+            </div>
+        </div>
+    </nav>
+ 
+    <div class="container mt-4">
+        <h1 class="mb-4">Post IT</h1>
+        <P class="small">Write about your day here and post it </P>
+
+        <div class="row">
+            <% for (post of posts) { %>
+
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            
+                            <p class="card-title fw-bold">posted by  -@<%= post.username %></p>
+                            <p class="card-text text-muted"><%= post.content %></p>
+                        </div>
+                        <div>
+                            <a class="btn btn-outline-danger" href="http://localhost:3000/posts/<%=post.id %>">show in detail</a>
+                             <a class="btn btn-outline-danger" href="http://localhost:3000/posts/<%=post.id %>/edit">Edit</a>
+                             
+                             <form method="post" action="/posts/<%=post.id%>?_method=Delete">
+                             <button class="btn btn-outline-danger">Delete</button>
+
+                             </form>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            <% } %>
+                <!-- <div>
+            <a class="btn btn-outline-danger" href="http://localhost:3000/posts/new">New Post</a>
+
+                </div> -->
+        </div>
+    </div>
+
+
+   
+   
+</body>
+</html>

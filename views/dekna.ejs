@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>single Post</title>
+
+        <link href="/dstyle.css" rel="stylesheet"/>
+</head>
+<body>
+        <h2>Here Is Your Post Detail</h2>
+    
+    <div class="card">
+        <p>Post id : <%= post.id %></p>
+        <h3 class="user">@<%= post.username%></h3>
+        <h4 class="content"><%= post.content%></h4>
+
+    </div>
+</body>
+</html>

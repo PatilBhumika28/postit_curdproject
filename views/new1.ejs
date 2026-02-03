@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Post</title>
+    <link href="/style1.css" rel="stylesheet"/>
+</head>
+<body style="background-color: #fdf6e3;">
+
+  <div class="container d-flex justify-content-center align-items-center"
+       style="min-height: 100vh;">
+
+    <div class="card shadow" style="width: 30rem;">
+      <div class="card-body">
+
+        <h3 class="card-title text-center mb-4"
+            style="color: maroon;">
+          Create New Post
+        </h3>
+
+        <form method="POST" action="/posts">
+
+          <div class="mb-3">
+            <label class="form-label">Username</label>
+            <input class="form-control"
+                   placeholder="Enter username"
+                   name="username"
+                   required>
+          </div> <br>
+
+          <div class="mb-3">
+            <label class="form-label">Content</label>
+            <textarea class="form-control"
+                      placeholder="Write your post..."
+                      name="content"
+                      rows="4"
+                      required></textarea>
+          </div>
+
+          <div class="d-grid">
+            <button class="btn text-white"
+                    style="background-color: maroon;">
+              Submit
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
